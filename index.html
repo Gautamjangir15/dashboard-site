@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Showcase</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 class="app-heading" id="multicolor-text">My Dashboard Showcase</h1>
+  <br><br>
+  <div class="container">
+    <button id="addDashboardBtn" style="display: none;">+ Add New Dashboard</button>
+
+    <form id="dashboardForm" class="hidden">
+      <label>
+        Name of the Dashboard <span class="required">*</span>
+        <input type="text" id="dashboardName" required />
+      </label>
+
+      <label>
+        Thumbnail Image (optional)
+        <input type="file" id="thumbnail" accept="image/*" />
+      </label>
+
+      <label>
+        Description (optional)
+        <textarea id="description" rows="3"></textarea>
+      </label>
+
+      <label>
+        Google Drive Video Link <span class="required">*</span>
+        <input type="url" id="videoLink" placeholder="Paste your Drive link here" required />
+      </label>
+
+
+      <div class="button-row">
+        <button type="button" class="cancel-btn" id="cancelBtn">Cancel</button>
+        <button type="submit" class="save-btn">Save</button>
+      </div>
+    </form>
+
+    <div id="dashboardList"></div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content" id="modalContent">
+      <h2 class="modal-title">Dashboard Preview</h2>
+      <span class="close-btn" id="closeModal">❌</span>
+      <span class="delete-btn" id="deleteModal" style="display: none;">🗑️</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
